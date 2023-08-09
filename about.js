@@ -16,7 +16,7 @@ Array.from(buttons).forEach((button) => {
             document.querySelector('input').value = string
            }
            else if (e.target.innerHTML === "x"){
-            string = eval(string.toString().slice(0,length-1));
+            string = string.substring(0, string.length-1)
             document.querySelector('input').value = string
            }
            
