@@ -33,6 +33,7 @@ body,html {
   border: 3px solid black;
   background-color: rgb(157, 153, 153);
   color: white;
+  cursor: pointer;
 }
 .button:hover{
   background-color: rgb(102, 97, 97);
@@ -59,4 +60,36 @@ body,html {
 }
 .orange:hover{
   background-color: rgb(169, 114, 13);
+}
+
+@media only screen and (max-width: 450px){
+  body,html{
+    background: rgb(36, 35, 35);
+    height: 50%;
+  }
+  .title{
+    margin-top: 70px;
+  }
+  .container{
+    width: 100%;
+    margin: 0px;
+    margin-top: 165px;
+    display: block;
+  }
+  .button{
+    padding: 24px;
+    width: 105px;
+    font-size: 1.3rem;
+    margin: 0px 0px;
+    margin-top: 5px;
+  }
+  .button2{
+    width: 213px;
+  }
+  .input{
+    width: 425px;
+    height: 60px;
+    font-size: 1.3rem;
+  }
+  
 }
