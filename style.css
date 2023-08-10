@@ -66,6 +66,7 @@ body,html {
   body,html{
     background: rgb(36, 35, 35);
     height: 50%;
+    min-width: fit-content
   }
   .title{
     margin-top: 70px;
@@ -73,7 +74,7 @@ body,html {
   .container{
     width: 100%;
     margin: 0px;
-    margin-top: 165px;
+    margin-top: 200px;
     display: block;
   }
   .button{
