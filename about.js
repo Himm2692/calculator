@@ -1,29 +1,38 @@
-let string = "";
-let buttons = document.querySelectorAll('.button');
-Array.from(buttons).forEach((button) => {
-      button.addEventListener('click', (e) => {
-            if(e.target.innerHTML == "=") {
-                  string = eval(string.replace('%', '/100'))
-                  document.querySelector('input').value = string
-            }
-            else if(e.target.innerHTML == '='){
-                  string = eval(string)
-                  document.querySelector('input').value = string
 
-            }
-            else if(e.target.innerHTML == 'c'){
-                  string = ""
-                  document.querySelector('input').value = string
+let screen = document.querySelector('input')
+function input(string){
+      let oldValue= screen.value;
+      let t = oldValue.length;
+      let lastChr = oldValue[t-1]
 
+      let oprSys = ['.','-','+','/','*','%']
+      if(oprSys.includes(string)){
+            if(oprSys.includes(lastChr)){
+                  let removeLast = oldValue.slice(0,-1);
+                  screen.value= removeLast+ string
+            }else{
+                  screen.value = oldValue + string
             }
-            else if(e.target.innerHTML == "x"){
-                  string = string.toString().slice(0,-1)
-                  document.querySelector('input').value = string
-                 }
-            else{
-                  console.log(e.target)
-                  string = string + e.target.innerHTML;
-                  document.querySelector('input').value = string
+      }else{
+                  screen.value = oldValue + string
             }
-      })
-})
+}
+
+function allClear(){
+      screen.value = ""
+}
+function back(){
+      screen.value = screen.value.slice(0,-1)
+}
+
+function calc(){
+            
+            if (screen.value.includes('%')) {
+                screen.value = screen.value.slice(0, -1); // Remove the % symbol
+                screen.value = eval(screen.value) / 100;
+            } else {
+                screen.value = eval(screen.value);
+            }
+}
+
+

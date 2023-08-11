@@ -23,7 +23,7 @@ body,html {
 }
 
 
-.button{
+button{
   padding: 20px;
   width: 80px;
   margin: 0 5px;
@@ -65,8 +65,8 @@ body,html {
 @media only screen and (max-width: 450px){
   body,html{
     background: rgb(36, 35, 35);
-    height: 50%;
-    min-width: fit-content
+    min-width: fit-content;
+    min-height: fit-content
   }
   .title{
     margin-top: 70px;
@@ -77,7 +77,7 @@ body,html {
     margin-top: 200px;
     display: block;
   }
-  .button{
+  button{
     padding: 24px;
     width: 105px;
     font-size: 1.3rem;
