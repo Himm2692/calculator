@@ -66,6 +66,7 @@ button{
   body,html{
     background: rgb(36, 35, 35);
     min-width: fit-content;
+    height: 90vh;
   }
   .title{
     margin-top: 70px;
